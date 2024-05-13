@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="eventb.css">
+</head>
+<body>
+    <div class="Grand">gp
+        <div class="parent">p
+            <div class="child">c
+
+            </div>
+        </div>
+    </div>
+    <script>
+
+      ///////////////////////////////////////////////////////  event bubbel
+
+
+
+        // let Gp = document.querySelector(".Grand");
+        // let pr = document.querySelector(".parent");
+        // let ch = document.querySelector(".child");
+
+        // Gp.addEventListener("click",()=>{
+        //     console.log("grandParent bubbling");
+        // });
+
+        // pr.addEventListener("click",()=>{
+        //     console.log("parent bubbling");
+        // });
+
+        // ch.addEventListener("click",()=>{
+        //     console.log("child bubbling");
+        // });
+
+
+
+        /////////////////////////////////////////////////// event Capturing
+        // let gd = document.querySelector(".Grand")
+        // gd.addEventListener("click",() =>{
+        //     console.log("grandParent capturing");
+        // },
+        // {capture:true}
+        // )
+
+        // let pa = document.querySelector(".parent")
+        // pa.addEventListener("click",() =>{
+        //     console.log("Parent capturing");
+        // },
+        // {capture:true}
+        // );
+
+        // let ch = document.querySelector(".child")
+        // ch.addEventListener("click",() =>{
+        //     console.log("child capturing");
+        // },
+        // {capture:true}
+        // );
+
+
+        let gd = document.querySelector(".Grand");
+        let pa = document.querySelector(".parent");
+        let ch = document.querySelector(".child");
+
+        gd.addEventListener("click",(e) =>{
+            console.log("grandpa bubbling");
+        },
+        {once:true,capture:true});
+
+        pa.addEventListener("click",(e) =>{
+            console.log("parent bubbling");
+        },
+        {once:true,capture:true});
+
+        ch.addEventListener("click",(e) =>{
+            console.log("child bubbling");
+        },
+        {once:true,capture:true});
+    </script>
+</body>
+</html>
