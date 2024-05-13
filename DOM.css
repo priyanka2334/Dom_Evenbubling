@@ -1,0 +1,17 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.box{
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+}
+.boxs{
+    height: 150px;
+    width: 150px;
+    border: 2px solid green;
+    margin: 5px;
+    background-color: aquamarine;
+}

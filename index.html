@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+    <div class="box"></div>
+    </div>
+    <button id="btn"> click me</button>
+
+    <form onsubmit="user()">
+    <label> UserName</label>
+    <input type="text" id="name"><br><br>
+    <div>
+    <label>Password</label>
+    <input type="password" id="password"><br><br>
+    </div>
+    <button>submit</button>
+    </form>
+
+    <div class="box">
+        <input type="text" class="text">
+    </div>
+    <button id="btnt">click me</button>
+    <script>
+
+     /////////////////////////////////   first task///////////////////////
+
+    //      let box = document.querySelector(".box");
+    //     let but = document.getElementById("btn");
+
+    //     const colors = ["green", "red", "blue", "yellow", "orange"];
+
+    //     let colorIndex = 0;
+
+    //     but.addEventListener("click",myfun);
+
+    //  function myfun(){
+    //  box.style.backgroundColor = colors[colorIndex];
+    //   colorIndex = (colorIndex + 1)%colors.length ;
+    //  } 
+   ///////////////////////////////////////// second task
+
+
+   function user(){
+   let inp = document.getElementById("name").value;
+   let pass = document.getElementById("password").value;
+   document.write(inp +"<br>");
+   document.write(pass+"<br>");
+
+   }
+
+
+//     let text = document.querySelector(".text")
+//     let button = document.querySelector("#btnt");
+    
+//     button.addEventListener('click',user);
+//     let arr=[1,2,3,5,6,'A','B','c','d','e','F','G','a','b','c','d','e','f','g'];
+//     function user(){
+//         arr.sort(function(){
+//         return 0.5-Math.random();
+//         });
+//         let captcha=arr.slice(1,4).join('');
+//         text.value=captcha;
+//  } 
+
+
+
+
+
+
+    </script>
+</body>
+</html>

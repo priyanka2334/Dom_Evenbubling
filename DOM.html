@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="DOM.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+    </div>
+    <button class="btn">click me</button>
+    <p>My name is priyanka</p>
+    <div class="boxs">box1</div>
+    <div class="boxs">box2</div>
+    <div class="boxs">box3</div>
+    <script>
+       
+      
+        //     let box = document.querySelector(".box");
+        // let btns = document.querySelector(".btn");
+
+        // box.style.backgroundColor = "red";
+
+        // btns.addEventListener("click", () => {
+
+        //     if (box.style.backgroundColor === "red") {
+             
+        //         box.style.backgroundColor = "green";
+        //     } else {
+                
+        //         box.style.backgroundColor = "red";
+        //     }
+        // });
+
+      ///////// //////////////////////how to change text inside the tag
+
+        // let para = document.querySelector("p");
+        // para.innerText = " I am from kanpur";
+
+
+  /////////////////////////////////    how to add text inside the tag  
+        // let para = document.querySelector("p");
+        // console.log(para.innerText);
+        // para.innerText = para.innerText+"i am from kanpur";
+        
+
+        
+        // let divs = document.querySelectorAll(".boxs")
+        // divs[0].innerText = "new unige value in box";
+
+
+
+        ///////////////////////////////////////for of loop////////////////////////////////////
+
+        let divs = document.querySelectorAll(".boxs")
+        let inx = 1;
+        for (div of divs){
+            div.innerText = `new unique value ${inx}`;
+            inx++; 
+        }
+
+    </script>
+</body>
+</html>
