@@ -14,9 +14,10 @@
             </div>
         </div>
     </div>
+    <button id="btn">click me</button>
     <script>
 
-      ///////////////////////////////////////////////////////  event bubbel
+ /////////////////////////////////////////////////////////////////////  event bubbel
 
 
 
@@ -39,6 +40,8 @@
 
 
         /////////////////////////////////////////////////// event Capturing
+
+
         // let gd = document.querySelector(".Grand")
         // gd.addEventListener("click",() =>{
         //     console.log("grandParent capturing");
@@ -61,24 +64,126 @@
         // );
 
 
-        let gd = document.querySelector(".Grand");
-        let pa = document.querySelector(".parent");
-        let ch = document.querySelector(".child");
+//////////////////////////////////////////////////////////////// using ones
 
-        gd.addEventListener("click",(e) =>{
-            console.log("grandpa bubbling");
-        },
-        {once:true,capture:true});
 
-        pa.addEventListener("click",(e) =>{
-            console.log("parent bubbling");
-        },
-        {once:true,capture:true});
+        // let gd = document.querySelector(".Grand");
+        // let pa = document.querySelector(".parent");
+        // let ch = document.querySelector(".child");
 
-        ch.addEventListener("click",(e) =>{
-            console.log("child bubbling");
-        },
-        {once:true,capture:true});
+        // gd.addEventListener("click",(e) =>{
+        //     console.log("grandpa bubbling");
+        // },
+        // {once:true,capture:true});
+
+        // pa.addEventListener("click",(e) =>{
+        //     console.log("parent bubbling");
+        // },
+        // {once:true,capture:true});
+
+        // ch.addEventListener("click",(e) =>{
+        //     console.log("child bubbling");
+        // },
+        // {once:true,capture:true});
+
+
+ ////////////////////////////////////////////////////////////// stopPropagation
+
+
+        //  let gd = document.querySelector(".Grand");
+        //  let pa = document.querySelector(".parent");
+        //  let ch = document.querySelector(".child");
+
+
+        //  gd.addEventListener("click",(e) => {
+        //     e.stopPropagation();
+        //     console.log("grandpa bubbling")
+        //  },
+        // //  {once:true,capture:true}
+        //  );
+
+ 
+        //  pa.addEventListener("click",(e) => {
+        //     // e.stopPropagation();
+        //     console.log("parent bubbling")
+        //  },
+        // //   {once:true,capture:true}
+        //  );
+         
+
+        //  ch.addEventListener("click",(e) => {
+        //     // e.stopPropagation();
+        //     console.log("child bubbling")
+        //  },
+        // //  {once:true,capture:true}
+        //  );
+
+
+    /////////////////////////////////////////////////////    how to use setTimeout in our code
+
+
+        //  let gd = document.querySelector(".Grand");
+        //  let pa = document.querySelector(".parent");
+        //  let ch = document.querySelector(".child");
+
+        //  const button = document.querySelector('#btn')
+        //  function printGrant(){
+        //     console.log("grantParent bubbling");
+        //  }
+
+        //  grantParent.addEventListener("click",printGrant);
+
+        //  function removeGrant(){
+        //     setTimeout(() =>{
+        //         Grant.removeEventListener("click",printGrant);
+        //     },2000)
+        //  }
+        //  button.addEventListener("click",removeGrant);
+
+
+//         let gd = document.querySelector(".Grand");
+// let pa = document.querySelector(".parent");
+// let ch = document.querySelector(".child");
+
+
+// const button = document.querySelector('#btn');
+
+
+// function printGrand() {
+//     console.log("grandParent bubbling");
+// }
+
+
+// gd.addEventListener("click", printGrand);
+
+
+// function removeGrand() {
+//     setTimeout(() => {
+//         gd.removeEventListener("click", printGrand); 
+//     }, 2000);
+// }
+
+// button.addEventListener("click", removeGrand);
+
+let gd = document.querySelector(".Grand");
+let pa = document.querySelector(".parent");
+let ch = document.querySelector(".child");
+
+
+function printGrant(){
+    console.log("gd bubbling");
+}
+
+gd.addEventListener("click", printGrant);
+
+setTimeout(() =>{
+    gd.removeEventListener("click", printGrant);
+}, 2000)
+    
+
+
+       
+ 
     </script>
 </body>
 </html>
