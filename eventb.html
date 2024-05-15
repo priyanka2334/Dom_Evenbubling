@@ -7,14 +7,22 @@
     <link rel="stylesheet" href="eventb.css">
 </head>
 <body>
-    <div class="Grand">gp
+    <!-- <div class="Grand">gp
         <div class="parent">p
             <div class="child">c
 
             </div>
         </div>
-    </div>
-    <button id="btn">click me</button>
+    </div> -->
+
+    <ul id="language">
+        <li>html</li>
+        <li>css</li>
+        <li>php</li>
+        <li>js</li>
+    </ul>
+    <p class="duplicate"></p>
+    <!-- <button id="btn">click me</button> -->
     <script>
 
  /////////////////////////////////////////////////////////////////////  event bubbel
@@ -122,68 +130,128 @@
     /////////////////////////////////////////////////////    how to use setTimeout in our code
 
 
-        //  let gd = document.querySelector(".Grand");
-        //  let pa = document.querySelector(".parent");
-        //  let ch = document.querySelector(".child");
-
-        //  const button = document.querySelector('#btn')
-        //  function printGrant(){
-        //     console.log("grantParent bubbling");
-        //  }
-
-        //  grantParent.addEventListener("click",printGrant);
-
-        //  function removeGrant(){
-        //     setTimeout(() =>{
-        //         Grant.removeEventListener("click",printGrant);
-        //     },2000)
-        //  }
-        //  button.addEventListener("click",removeGrant);
-
-
-//         let gd = document.querySelector(".Grand");
+// let gd = document.querySelector(".Grand");
 // let pa = document.querySelector(".parent");
 // let ch = document.querySelector(".child");
 
+// let button = document.querySelector("#btn");
 
-// const button = document.querySelector('#btn');
-
-
-// function printGrand() {
-//     console.log("grandParent bubbling");
+// function printGrant(){
+//     console.log("gd bubbling");
 // }
 
+// gd.addEventListener("click", printGrant);
 
-// gd.addEventListener("click", printGrand);
-
-
-// function removeGrand() {
-//     setTimeout(() => {
-//         gd.removeEventListener("click", printGrand); 
-//     }, 2000);
+// function remove(){
+// setTimeout(() =>{
+//     gd.removeEventListener("click", printGrant);
+// }, 10000)
 // }
-
-// button.addEventListener("click", removeGrand);
-
-let gd = document.querySelector(".Grand");
-let pa = document.querySelector(".parent");
-let ch = document.querySelector(".child");
-
-
-function printGrant(){
-    console.log("gd bubbling");
-}
-
-gd.addEventListener("click", printGrant);
-
-setTimeout(() =>{
-    gd.removeEventListener("click", printGrant);
-}, 2000)
+// btn.addEventListener("click",remove);
     
+//////////////////////////////////////////////////////////////// Event mouseover
 
 
-       
- 
+// let gd = document.querySelector(".Grand");
+// let pa = document.querySelector(".parent");
+// let ch = document.querySelector(".child");
+
+// pa.addEventListener("mouseover", () => {
+//     console.log("hovering");
+// })
+
+////////////////////////////////////////////////////////////// mouseenter
+
+// let gd = document.querySelector(".Grand");
+// let pa = document.querySelector(".parent");
+// let ch = document.querySelector(".child");
+
+// gd.addEventListener("mouseenter", () => {
+//     console.log("hovering");
+// })
+
+/////////////////////////////////////////////////////////////// mouseout
+
+
+// let gd = document.querySelector(".Grand");
+// let pa = document.querySelector(".parent");
+// let ch = document.querySelector(".child");
+
+// gd.addEventListener("mouseout", () => {
+//     console.log("hovering");
+// })
+
+///////////////////////////////////////////////////////////// mouseleave
+
+
+// let gd = document.querySelector(".Grand");
+// let pa = document.querySelector(".parent");
+// let ch = document.querySelector(".child");
+
+// ch.addEventListener("mouseleave", () => {
+//     console.log("hovering");
+// })
+
+
+////////////////////////////////////////////////////////// FRAGMENT
+
+
+// let fragment = new DocumentFragment();
+// let languages = ['HTML', 'CSS', 'JAVASCRIPT'];
+// let lang = document.querySelector('#language');
+// languages.forEach((language) => {
+//     let li = document.createElement('li');
+//     li.innerHTML = language;
+//     fragment.appendChild(li);
+// });
+// lang.appendChild(fragment);
+
+
+
+////////////////////////////////////////////////////////// how to append the value for exam inside the ul
+
+
+// let lang = document.querySelector('ul');
+// let addlang = ['python', 'java', 'Ruby', 'c++', 'PHP'];
+// const item = addlang.map((language) =>{
+//     const li = document.createElement('li');
+//     li.innerText = language;
+//     return li;
+// });
+// lang.append(...item);
+
+
+// let cloneNode = originalNode.cloneNode(deep);
+// let lang = document.querySelector('ul');
+// let cloneLang = lang.cloneNode(true);
+
+//////////////////////////////////////////////////////////////// shallow copy cloneNode
+
+
+// let duplicate=document.querySelector('.duplicate');
+// let originalNode = document.querySelector('ul');
+// let cloneNode = originalNode.cloneNode(false);
+
+// duplicate.appendChild(cloneNode);
+
+////////////////////////////////////////////////////////////// Deep copy cloneNode
+
+// let duplicate=document.querySelector('.duplicate');
+// let originalNode = document.querySelector('ul');
+// let cloneNode = originalNode.cloneNode(true);
+
+// duplicate.appendChild(cloneNode);
+
+
+///////////////////////////////////////////////////// how to remove all content
+// let leng = document.querySelector("#language");
+// leng.innerHTML = "";
+
+// let el=document.querySelector('#language');
+// el.innerHTML='';
+
+
+
     </script>
 </body>
 </html>
