@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="box">
+        <input type="text" class="text">
+    </div>
+    <button id="btnt">click me</button>
+    <script>
+        let text = document.querySelector(".text")
+   let button = document.querySelector("#btnt");
+    
+   button.addEventListener('click',user);
+   let arr=[1,2,3,5,6,'A','B','c','d','e','F','G','a','b','c','d','e','f','g'];
+   function user(){
+   arr.sort(function(){
+   return 0.5-Math.random();
+   });
+  let captcha=arr.slice(1,4).join('');
+   text.value=captcha;
+   } 
+
+    </script>
+</body>
+</html>
+
+<!-- git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/priyanka2334/DOMtask.git
+git push -u origin main -->

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+    height: 300px;
+    width: 300px;
+    border: 2px solid red ;
+    margin: auto;
+}
+.container{
+    /* margin: auto; */
+}
+#btn{
+    font-size: 20px;
+    height: 60px;
+    width: 200px;
+    padding: 20px;
+    margin: 3% 45%;
+}
+#btnt{
+    font-size: 20px;
+    height: 60px;
+    width: 200px;
+    padding: 20px;
+    margin: 3% 45%;
+
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        </div>
+        <button id="btn"> click me</button>
+        <script>
+            let box = document.querySelector(".box");
+      let but = document.getElementById("btn");
+
+       const colors = ["green", "red", "blue", "yellow", "orange"];
+
+       let colorIndex = 0;
+
+      but.addEventListener("click",myfun);
+
+     function myfun(){
+     box.style.backgroundColor = colors[colorIndex];
+      colorIndex = (colorIndex + 1)%colors.length ;
+      } 
+        </script>
+</body>
+</html>
