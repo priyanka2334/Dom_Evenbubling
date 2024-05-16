@@ -1,0 +1,167 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .message::first-letter{
+            color:blue;
+            font-size: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <p class="message">Lorem ipsum dolor sit amet.</p>
+    <input type="text" id="input">
+
+    <ul id="list">
+        <li id="home">item1</li>
+        <li id="about">item2</li>
+        <li id="services">item3</li>
+    </ul>
+    <script>
+
+        /////////////////////////////////////////////////////////////////// computedstyle   
+
+        // let mas = document.querySelector(".message");
+        // let style = getComputedStyle(mas);
+
+/////////////////////////////////////////////////////////////////////how to add more classes
+
+        //  let mas = document.querySelector(".message");
+        //  mas.classList.add("new-class","new-class2");
+        //  console.log(mas.classList);
+
+
+       /////////////////////////////////////////////////////////////////// how to remove classes
+
+        //  let mas = document.querySelector(".message");
+        //  mas.classList.add("new-class","new-class2");
+
+        //  mas.classList.remove("new-class");
+        //  console.log(mas.classList);
+
+  //////////////////////////////////////////////////////////////////////////how to replace  classes in our code
+  
+//   let mas = document.querySelector(".message");
+
+//   mas.classList.add("new-class","new-clas","new-clas1");
+// //   console.log(mas.className);
+//   mas.classList.replace("new-cla","new-class");
+//   console.log(mas.className);
+
+
+/////////////////////////////////////////////////////////////////////////////////////////classList.contains
+
+//   let mas = document.querySelector(".message");
+//   mas.classList.add("new-class","new-class2","new-class3");
+//   console.log(mas.className);
+
+//   let checkName = mas.classList.contains("new-class2");
+//   console.log(checkName);
+
+
+//////////////////////////////////////////////////////////////////////////////// event keydown
+
+
+// let input = document.querySelector('#input');
+
+// input.addEventListener('keydown',function(e){
+//     console.log('keydown event');
+// });
+
+///////////////////////////////////////////////////////////////////// event press
+
+// let input = document.querySelector('#input');
+
+// input.addEventListener('keypress',function(e){
+//     console.log(e.key, e.code);
+// });
+
+
+//////////////////////////////////////////////////////////// event keyup
+
+//  let input = document.querySelector('#input');
+
+// input.addEventListener('keyup',function(e){
+//     console.log(e.key, e.code);
+// });
+
+/////////////////////////////////////////////////////////Focus and blur event
+
+// let input = document.querySelector('#input');
+// input.addEventListener('focus', function (){
+//     console.log("input focused");
+// });
+
+// input.addEventListener('blur',function(){
+//     console.log('Input blurred');
+// });
+
+
+////////////////////////////////////////////////////////how to use color in focus and blur
+
+
+// let input = document.querySelector('#input');
+// input.addEventListener('focus', function (e){
+//    // console.log("input focused");
+//    e.target.style.background = 'yellow';
+// });
+
+// input.addEventListener('blur',function(e){
+//     e.target.style.background = 'green';
+// });
+
+
+
+
+// let home = document.querySelector('#home');
+// home.addEventListener('click',function(e){
+//     console.log("Home clicked");
+// });
+
+// let about = document.querySelector('#about');
+// about.addEventListener('click',function(e){
+//     console.log("about clicked");
+// });
+
+// let services  = document.querySelector('#services');
+// services.addEventListener('click',function(e){
+//     console.log("services clicked");
+// });
+
+// let list = document.querySelector('#list');
+// list.addEventListener('click',function(e){
+//     if(e.target.id === 'home'){
+//         console.log(' home clicked');
+//     } else if(e.target.id === 'about'){
+//         console.log('about clicked');
+//     }else if(e.target.id === 'services'){
+//         console.log('services clicked');
+//     }
+// });
+
+
+////////////////////////////////////////////////////switch case
+
+ let list = document.querySelector('#list');
+ list.addEventListener('click', function(e) {
+     switch (e.target.id) {
+        case 'home':
+            console.log('Home clicked');
+            break;
+        case 'about':
+            console.log('About clicked');
+            break;
+        case 'services':
+            console.log('Services clicked');
+            break;
+    }
+});
+    </script>
+</body>
+</html>
