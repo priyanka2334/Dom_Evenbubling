@@ -1,0 +1,117 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .formdesign{
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <from action="/myaction.php" name="myForm" onsubmit="return validateForm()">
+        <div class="formdesign" id="name">
+            Name : <input type="text" name="fname" required><span class="formerror"></span>
+        </div>
+        <div class="formdesign" id="email">
+            Name : <input type="email" name="femail" required><span class="formerror"></span>
+        </div>
+        <div class="formdesign" id="phone">
+            Name : <input type="number" name="fphone" required><span class="formerror"></span>
+        </div>
+        <input class="button" type="submit" value="submit">
+    </from>
+    <script>
+        function validateForm(){
+            let returnval = true;
+            let name = document.forms["myForm"]["fname"].value;
+            if(name.length<3){
+                seterror("name","*Length of name is too short");
+                returnval = false;
+            }
+            let email = document.forms["myForm"]["femail"].value;
+            if(!email.endsWith(".com")){
+                seterror("email","*Email is not vaild");
+                returnval = false;
+            }
+            let phone = document.forms["myForm"]["fphone"].value;
+            if(!phone.startsWith(9) && phone.startsWith(8) && phone.startsWith(7)&& phone.startsWith(6)){
+                seterror("email","* number");
+                returnval = false;
+            }
+            return returnval;
+        }
+        function seterror(id, errer){
+            let element = document.getElementById(id);
+            element.getElementsByClassName("formerror")[0].innerHTML = error;
+        }
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .formdesign {
+            margin: 10px;
+        }
+        .formerror {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <form action="/myaction.php" name="myForm" onsubmit="return validateForm()">
+        <div class="formdesign" id="name">
+            Name: <input type="text" name="fname" required><span class="formerror"></span>
+        </div>
+        <div class="formdesign" id="email">
+            Email: <input type="email" name="femail" required><span class="formerror"></span>
+        </div>
+        <div class="formdesign" id="phone">
+            Phone: <input type="number" name="fphone" required><span class="formerror"></span>
+        </div>
+        <input class="button" type="submit" value="Submit">
+    </form>
+    <script>
+        function validateForm() {
+            let returnval = true;
+
+            // Name validation
+            let name = document.forms["myForm"]["fname"].value;
+            if (name.length < 3) {
+                seterror("name", "*Length of name is too short");
+                returnval = false;
+            }
+
+            // Email validation
+            let email = document.forms["myForm"]["femail"].value;
+            if (!email.endsWith(".com")) {
+                seterror("email", "*Email is not valid");
+                returnval = false;
+            }
+
+            // Phone validation
+            let phone = document.forms["myForm"]["fphone"].value;
+            if (!phone.startsWith('9') && !phone.startsWith('8') && !phone.startsWith('7') && !phone.startsWith('6')) {
+                seterror("phone", "*Phone number is not valid");
+                returnval = false;
+            }
+
+            return returnval;
+        }
+
+        function seterror(id, error) {
+            let element = document.getElementById(id);
+            element.getElementsByClassName("formerror")[0].innerHTML = error;
+        }
+    </script>
+</body>
+</html>
