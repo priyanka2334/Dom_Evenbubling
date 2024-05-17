@@ -4,8 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+         .box{
+            margin: 20%,50%;
+            border: ;
+         }
+    </style>
 </head>
 <body>
+    <div class="box">
+    <h1>FORM</h1>
     <form onsubmit=" return user()">
         <label> UserName</label>
         <input type="text" id="name"><br><br>
@@ -15,6 +23,7 @@
         </div>
         <button type="submit">submit</button>
         </form>
+        </div>
         <script>
             function user(){
              let inp = document.getElementById("name").value;
