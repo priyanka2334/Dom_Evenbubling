@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <button class="add">add</button>
+    <button class="remove">remove</button>
+    <ul></ul>
+    <script>
+        let btn = document.querySelector(".add");
+        let remo = document.querySelector('.remove');
+        let int = document.querySelector('input');
+        let order = document.querySelector('ul');
+        
+        btn.addEventListener('click',function(){
+            let ele = document.createElement("li");
+            ele.className="list";
+            ele.innerText = int.value;
+            let btn2 = document.createElement('button');
+            btn2.innerText = "remove";
+            btn2.addEventListener('click',function(){
+                ele.remove();
+            });
+            ele.append(btn2);
+            order.append(ele);
+        });
+        remo.addEventListener('click',function(){
+            order.remove()
+        });
+    </script>
+</body>
+</html>

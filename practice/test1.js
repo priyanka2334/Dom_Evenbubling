@@ -3,7 +3,7 @@
 // 	input - this is javascript
 // 	output - This Is JavaScript
 
-et arrstr=str.split(' ');
+// et arrstr=str.split(' ');
 // for(let i=0;i<arrstr.length;i++){
 //     arrstr[i]=arrstr[i][0].toUpperCase()+arrstr[i].substring(1);
 // }
@@ -88,15 +88,15 @@ et arrstr=str.split(' ');
 
 // 5. Reverse the given sentence.
 
-let text5 = "i am learning javascript";
-let text = text5.split('').reverse().join('');
-console.log(text);
+// let text5 = "i am learning javascript";
+// let text = text5.split('').reverse().join('');
+// console.log(text);
 
 
 // 6. Reveres the given string word by word then return the reversed string.
 
-let text6 = ['i', 'am', 'learning', 'javascript'];
-for (let i = 0; i < text5.length; i++) {
-    let text = text6[i].split('').reverse().join('');
-    console.log(text);
-}
+// let text6 = ['i', 'am', 'learning', 'javascript'];
+// for (let i = 0; i < text5.length; i++) {
+//     let text = text6[i].split('').reverse().join('');
+//     console.log(text);
+// }
