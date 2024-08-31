@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a id="mylink" href="https://www.youtube.com/watch?v=SqrppLEljkY" hreflang="en" rel="noopener" target="_blank">example</a>
+    <button class="btn">click me</button>
+    <div id="output"></div>
+    <script>
+        let newbtn = document.querySelector('.btn');
+        newbtn.addEventListener("click", function() {
+            let link = document.querySelector('#mylink');
+            let href = link.getAttribute('href');
+            let hreflang = link.getAttribute('hreflang');
+            let rel = link.getAttribute('rel');
+            let target = link.getAttribute('target');
+
+            let output = `
+                <p>href: ${href}</p>
+                <p>hreflang: ${hreflang}</p>
+                <p>rel: ${rel}</p>
+                <p>target: ${target}</p>
+            `;
+
+            document.querySelector("#output").innerHTML = output;
+        });
+    </script>
+</body>
+</html>

@@ -100,3 +100,22 @@
 //     let text = text6[i].split('').reverse().join('');
 //     console.log(text);
 // }
+
+
+
+// let p = function(){
+//     console.log("Hello priyanka");
+// }
+// p();
+
+// let d = () =>{
+//     console.log("hello piyanka");
+// }
+// d();
+
+// (function(name){
+//     console.log("priyanka",name);
+// }
+// ("preeti"));
+
+

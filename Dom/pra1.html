@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam tenetur repellendus earum, accusamus repellat fugit quos voluptas esse animi, placeat ea quasi eveniet quo incidunt sed? Obcaecati facilis possimus laboriosam?</p>
+    <script>
+        let newbtn = document.createElement("button");
+        let par = document.querySelector(".para");
+        document.body.appendChild(newbtn);
+        newbtn.innerText = "click me";
+        newbtn.addEventListener('click',function(){
+            
+            par.style.color = "green";
+        });
+    </script>
+</body>
+</html>

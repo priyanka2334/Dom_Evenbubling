@@ -1,0 +1,61 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table class="tablef">
+    </table>
+    <button class="btn">click me</button>
+    <script>
+        let newbtn = document.querySelector(".btn");
+        let table = document.querySelector(".tablef");
+
+        newbtn.addEventListener('click',function(){
+            let ele = document.createElement("tr");
+            ele.className = "table_row";
+            let ele1 = document.createElement("td");
+            ele1.className ="table_d";
+
+            ele1.innerText = "New cell";
+
+            table.appendChild(ele);
+            ele.appendChild(ele1);
+        });
+    </script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table class="tablef">
+    </table>
+    <button class="btn">click me</button>
+    <script>
+        let newbtn = document.querySelector(".btn");
+        let table = document.querySelector(".tablef");
+
+        newbtn.addEventListener('click', function() {
+            let ele = document.createElement("tr");
+            ele.className = "table_row";
+            let ele1 = document.createElement("td");
+            ele1.className = "table_d";
+
+            // Assuming you want to insert some text content
+            ele1.innerText = "New Cell";
+
+            ele.appendChild(ele1); // Append the td to the tr
+            table.appendChild(ele); // Append the tr to the table
+        });
+    </script>
+</body>
+</html>
